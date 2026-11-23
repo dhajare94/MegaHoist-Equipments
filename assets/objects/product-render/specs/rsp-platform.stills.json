@@ -1,0 +1,63 @@
+{
+ "id": "rsp-platform",
+ "made": "2026-11-23T14:34:18.386Z",
+ "px": 1000,
+ "grounds": [
+  "light"
+ ],
+ "colors": [
+  "orange"
+ ],
+ "variants": {
+  "side": {
+   "view": "side",
+   "scene": null,
+   "off": false,
+   "grounds": [
+    "light"
+   ],
+   "stills": {
+    "light": {
+     "orange": {
+      "file": "stills/rsp-platform-side-orange.webp",
+      "half": "stills/rsp-platform-side-orange-half.webp",
+      "w": 878,
+      "h": 1043
+     }
+    }
+   },
+   "box": [
+    0.008,
+    0.0058,
+    0.9556,
+    0.9703
+   ],
+   "px": 1000
+  },
+  "three-quarter": {
+   "view": "three-quarter",
+   "scene": null,
+   "off": false,
+   "grounds": [
+    "light"
+   ],
+   "stills": {
+    "light": {
+     "orange": {
+      "file": "stills/rsp-platform-three-quarter-orange.webp",
+      "half": "stills/rsp-platform-three-quarter-orange-half.webp",
+      "w": 846,
+      "h": 1071
+     }
+    }
+   },
+   "box": [
+    0.0071,
+    0.0056,
+    0.9338,
+    0.943
+   ],
+   "px": 1000
+  }
+ }
+}
