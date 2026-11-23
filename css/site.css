@@ -21,15 +21,34 @@
 .menu-card .panel img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .rsp { width: 100%; background: none; border: 0; }
 #platform .rsp, #enquiry .rsp { height: min(420px, 46svh); }
-.hero__media:has(> .frame.rsp) { background: none; }
-.hero__media > .frame.rsp { position: absolute; inset: 0; width: 100%; height: 100%; background: none; border: 0; }
+.hero__media.stage { background: none; }
+.hero__media > img.stage-still { object-fit: contain; padding: 7%; background: none; }
+.hero__media > img.cut-float {
+  inset: auto; left: 3%; bottom: 5%;
+  width: min(230px, 44%); height: auto;
+  object-fit: contain; z-index: 2; pointer-events: none;
+  filter: drop-shadow(0 16px 22px rgba(16, 43, 69, 0.18));
+}
+.hero__media .ly-float { z-index: 3; }
+.stage { position: relative; }
+.stage canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; z-index: 1; visibility: hidden; }
+.stage.is-live canvas { visibility: visible; }
+.frame.stage { padding: 0; overflow: hidden; background: none; border: 0; }
+.frame.stage > .stage-still { position: absolute; inset: 8%; width: auto; height: auto; max-width: 84%; max-height: 84%; margin: auto; object-fit: contain; }
+.stage.is-live > .stage-still { visibility: hidden; }
+.mo-pc__visuals.is-live .mo-pc__visual img { opacity: 0; }
 #services .frame--photo { min-height: 280px; }
 :focus-visible { outline: 2px solid #102B45; outline-offset: 2px; }
 html[data-motion] .btn { transition-property: transform; }
-#enquiry .stack-tight > p > a {
+#enquiry .stack-tight > p > a,
+.footer__col a,
+.footer__legal a {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
+}
+@media (max-width: 700px) {
+  .cut-float { display: none; }
 }
 @media (max-width: 639px) {
   #services .frame--photo { height: 140px; min-height: 0; }

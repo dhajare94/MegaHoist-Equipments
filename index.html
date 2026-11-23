@@ -4,7 +4,7 @@
      mark ring is replaced by the official logo. Palette is the client's: Manrope, navy plate #102B45, orange #FF8200, sky #EAF3FA.
      First dealt palette flour-terracotta clashes with the orange logo. First type pairing Work Sans is set aside because the brief names Manrope.
      moments on the home page: pinned-chapters on #steps, word-highlight on #record.
-     3D: product render of a rack supported platform, because the brief asks for 3D. Stills on a phone and under reduced motion; a live turn on a wide screen. -->
+     3D: Three.js rack supported platform in the hero (drag to turn), a scaffold that assembles with the steps, and a platform that climbs as the contact section scrolls. Stills on a phone and under reduced motion. -->
 <html lang="en" data-type="service" data-radius="soft" data-buttons="tonal" data-motion>
 <head>
 <meta charset="utf-8">
@@ -146,12 +146,9 @@
           <a class="btn btn--secondary" href="#services">See the equipment</a>
         </div>
       </div>
-      <div class="hero__media span-6 start-7">
-        <picture>
-<source type="image/avif" srcset="media/img/cradle-facade-480.avif 480w, media/img/cradle-facade-960.avif 960w, media/img/cradle-facade-1600.avif 1600w" sizes="(min-width: 1024px) 628px, 100vw">
-<source type="image/webp" srcset="media/img/cradle-facade-480.webp 480w, media/img/cradle-facade-960.webp 960w, media/img/cradle-facade-1600.webp 1600w" sizes="(min-width: 1024px) 628px, 100vw">
-<img class="" src="media/img/cradle-facade-1600.jpg" srcset="media/img/cradle-facade-480.jpg 480w, media/img/cradle-facade-960.jpg 960w, media/img/cradle-facade-1600.jpg 1600w" sizes="(min-width: 1024px) 628px, 100vw" alt="Two workers in helmets stand in an orange suspended cradle against a concrete facade" width="1600" height="1574" data-source="stand-in" data-subject="suspended cradle on a facade" fetchpriority="high" style="--ly-pos: 50% 68%">
-</picture>
+      <div class="hero__media span-6 start-7 stage" data-stage="orbit" data-product="assets/objects/product-render/specs/rsp-platform.json">
+        <img class="stage-still" src="media/cut/scaffold-tower.webp" alt="A scaffold tower of standards, ledgers and decks" width="1400" height="1854" data-source="stand-in" data-subject="scaffold tower" fetchpriority="high">
+        <img class="cut-float" src="media/cut/scaffold-frame.webp" alt="An open scaffold frame" width="1443" height="520" data-source="stand-in" data-subject="scaffold frame">
         <div class="ly-float ly-float--tr">
           <div class="ly-float__row"><span class="ly-live">Office</span><span>9:00 to 18:00</span></div>
           <div class="ly-float__title">Kalamboli, Navi Mumbai</div>
@@ -215,7 +212,7 @@
           </li>
         </ol>
       </div>
-      <div class="mo-pc__visuals frame"></div>
+      <div class="mo-pc__visuals frame stage" data-stage="scaffold" data-product="assets/objects/product-render/specs/rsp-platform.json"></div>
     </div>
   </section>
 
@@ -233,7 +230,9 @@
           <h2 id="enquiry-h">Contact for equipment</h2>
           <p>One mast carries the deck. The orange unit is the drive that climbs the rack.</p>
         </div>
-        <div class="frame rsp" id="rsp" data-product="assets/objects/product-render/specs/rsp-platform.json" data-product-place="stage" data-product-view="side" data-product-color="orange" data-product-params='{"turn":1}' aria-label="A rack supported platform with one mast, a deck and guard rails"></div>
+        <div class="frame rsp stage" id="rsp" data-stage="climb" data-product="assets/objects/product-render/specs/rsp-platform.json" aria-label="A rack supported platform with one mast, a deck and guard rails">
+          <img class="stage-still" src="assets/objects/product-render/specs/stills/rsp-platform-side-orange.webp" alt="A rack supported platform with a mast, a deck and guard rails" width="1157" height="1250">
+        </div>
       </div>
       <div class="group">
       <div class="grid grid--top">
@@ -323,6 +322,6 @@
 <script type="module" src="assets/system.js"></script>
 <script type="module" src="assets/motion/motion.js"></script>
 <script type="module" src="assets/layout/layout.js"></script>
-<script type="module" src="assets/objects/product-render/auto.js"></script>
+<script type="module" src="js/boot.js"></script>
 </body>
 </html>
